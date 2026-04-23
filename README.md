@@ -6,7 +6,7 @@ A full-stack invoicing application built using the MERN stack. This project allo
 
 ## 🌐 Live Demo
 
-- 🔗 Frontend: invoice-flow-six-rho.vercel.app
+- 🔗 Frontend: https://invoice-flow-six-rho.vercel.app
 - 🔗 Backend API: https://invoiceflow-am41.onrender.com
 
 ---
