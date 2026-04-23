@@ -17,11 +17,11 @@ const InputBox = ({ label, type, value, name, onChange, placeholder } : InputBox
             id={name}
             name={name}
             value={value}
-            readOnly={name === 'invoiceNo' || name === 'date' || name=== 'total'}
+            readOnly={name === 'invoiceNo' || name === 'date' || name === 'total' || name === 'price'}
             placeholder={placeholder}
             onChange={onChange}
             className={`dark:bg-[#2e3b4c] px-2 py-1 outline-none rounded-md w-35 md:w-38 lg:w-auto ${
-                name === 'invoiceNo' || name === 'date' || name === 'total' ? 'cursor-not-allowed' : ''
+                name === 'invoiceNo' || name === 'date' || name === 'total' || name === 'price' ? 'cursor-not-allowed' : ''
             }`}
         />
     </div>
