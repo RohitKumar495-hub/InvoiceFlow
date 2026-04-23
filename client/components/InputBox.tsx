@@ -20,7 +20,7 @@ const InputBox = ({ label, type, value, name, onChange, placeholder } : InputBox
             readOnly={name === 'invoiceNo' || name === 'date' || name === 'total' || name === 'price'}
             placeholder={placeholder}
             onChange={onChange}
-            className={`dark:bg-[#2e3b4c] px-2 py-1 outline-none rounded-md w-35 md:w-38 lg:w-auto ${
+            className={`dark:bg-[#2e3b4c] px-2 py-1 outline-none rounded-md w-33 md:w-auto ${
                 name === 'invoiceNo' || name === 'date' || name === 'total' || name === 'price' ? 'cursor-not-allowed' : ''
             }`}
         />

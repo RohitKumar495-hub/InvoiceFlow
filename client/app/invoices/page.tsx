@@ -252,7 +252,7 @@ const InvoicePage = () => {
       <div className=''>
 
         {/* 🔹 Form */}
-        <form className='grid gap-3 grid-cols-2'>
+        <form className='grid gap-3 lg:grid-cols-2'>
 
           <div>
 
@@ -270,7 +270,7 @@ const InvoicePage = () => {
 
             </div>
 
-            <div className="mt-6 dark:bg-[#1f2937] p-4 rounded-md">
+            <div className="mt-6 dark:bg-[#1f2937] p-4 rounded-md lg:block hidden">
 
               <h2 className="font-semibold mb-3">Summary</h2>
 
@@ -298,7 +298,7 @@ const InvoicePage = () => {
 
             </div>
 
-            <div className="flex gap-4 mt-4">
+            <div className="lg:flex gap-4 mt-4 hidden">
               <div className="flex gap-4 mt-4">
                 <Button
                   type="button"
@@ -430,6 +430,51 @@ const InvoicePage = () => {
 
         </form>
       </div>
+
+      
+            <div className="dark:bg-[#1f2937] p-4 rounded-md block lg:hidden">
+
+              <h2 className="font-semibold mb-3">Summary</h2>
+
+              <div className="flex justify-between mb-1">
+                <span>Subtotal:</span>
+                <span>₹{summary.subtotal.toFixed(2)}</span>
+              </div>
+
+              <div className="flex justify-between mb-1">
+                <span>Total Discount:</span>
+                <span>- ₹{summary.totalDiscount.toFixed(2)}</span>
+              </div>
+
+              <div className="flex justify-between mb-1">
+                <span>Total GST:</span>
+                <span>+ ₹{summary.totalGST.toFixed(2)}</span>
+              </div>
+
+              <hr className="my-2 border-gray-600" />
+
+              <div className="flex justify-between font-semibold text-lg">
+                <span>Grand Total:</span>
+                <span>₹{summary.grandTotal.toFixed(2)}</span>
+              </div>
+
+            </div>
+
+            <div className="flex gap-4 lg:hidden">
+              <div className="flex gap-4 mt-4">
+                <Button
+                  type="button"
+                  label='Save Invoice'
+                  onclick={handleSaveInvoice}
+                />
+
+                <Button
+                  type="button"
+                  label='Download Invoice'
+                  onclick={handleDownloadPDF}
+                />
+              </div>
+            </div>
 
     </div>
   )
